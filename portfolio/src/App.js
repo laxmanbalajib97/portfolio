@@ -33,7 +33,7 @@ class App extends React.Component {
       <Router>
         {" "}
         <Container className="p0" fluid={true}>
-          <Navbar className="border-bottom">
+          <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Balasubramanian, Laxman Balaji</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
