@@ -6,6 +6,10 @@ import Nav from "react-bootstrap/Nav";
 import "./App.css";
 
 import Footer from "./Components/footer";
+import HomePage from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
+import ContactPage from "./Pages/ContactPage";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +38,7 @@ class App extends React.Component {
       <Router>
         {" "}
         <Container className="p0" fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
+          <Navbar className="border-bottom " bg="transparent" expand="lg">
             <Navbar.Brand>Balasubramanian, Laxman Balaji</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
@@ -52,7 +56,39 @@ class App extends React.Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-
+          <Route
+            path="/"
+            exact
+            render={() => (
+              <HomePage
+                title="this.state.home.title"
+                subtitle="this.state.home.subtitle"
+                text="this.state.home.text"
+              />
+            )}
+          />
+          <Route
+            path="/about"
+            exact
+            render={() => (
+              <AboutPage
+                title="this.state.home.title"
+                subtitle="this.state.home.subtitle"
+                text="this.state.home.text"
+              />
+            )}
+          />
+          <Route
+            path="/contact"
+            exact
+            render={() => (
+              <ContactPage
+                title="this.state.home.title"
+                subtitle="this.state.home.subtitle"
+                text="this.state.home.text"
+              />
+            )}
+          />
           <Footer />
         </Container>
       </Router>
