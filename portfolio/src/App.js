@@ -61,9 +61,8 @@ class App extends React.Component {
             exact
             render={() => (
               <HomePage
-                title="this.state.home.title"
-                subtitle="this.state.home.subtitle"
-                text="this.state.home.text"
+                title={this.state.home.title}
+                text={this.state.home.text}
               />
             )}
           />
@@ -72,7 +71,7 @@ class App extends React.Component {
             exact
             render={() => (
               <AboutPage
-                title="this.state.home.title"
+                title={this.state.home.title}
                 subtitle="this.state.home.subtitle"
                 text="this.state.home.text"
               />
@@ -83,7 +82,7 @@ class App extends React.Component {
             exact
             render={() => (
               <ContactPage
-                title="this.state.home.title"
+                title={this.state.home.title}
                 subtitle="this.state.home.subtitle"
                 text="this.state.home.text"
               />
